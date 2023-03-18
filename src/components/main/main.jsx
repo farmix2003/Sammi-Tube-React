@@ -1,5 +1,11 @@
+import { Link } from "react-router-dom";
+import { Button } from "@mui/material";
 const Main = () => {
-  return <div>Main</div>;
+  return (
+    <Link to={"/channel"}>
+      <Button>Channel</Button>
+    </Link>
+  );
 };
 
 export default Main;

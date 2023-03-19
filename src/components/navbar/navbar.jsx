@@ -10,7 +10,12 @@ const Navbar = () => {
       alignItems={"center"}
       justifyContent={"space-between"}
       p={2}
-      sx={{ zIndex: 999, position: "sticky", background: color.primary }}
+      sx={{
+        zIndex: 999,
+        position: "sticky",
+        top: 0,
+        background: color.primary,
+      }}
     >
       <Link to={"/"}>
         <img src={logo} alt="logo" height={30} />

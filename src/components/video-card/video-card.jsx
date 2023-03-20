@@ -13,11 +13,20 @@ import { color } from "../../constants/colors";
 const VideoCard = ({ videos }) => {
   console.log(videos);
   return (
-    <Card sx={{ width: "300px", boxShadow: "none", borderRadius: 0 }}>
+    <Card
+      sx={{
+        width: { xs: "100%", sm: "300px", md: "300px" },
+        boxShadow: "none",
+        borderRadius: 0,
+      }}
+    >
       <CardMedia
         image={videos?.snippet?.thumbnails?.high?.url}
         alt={videos?.snippet?.title}
-        sx={{ width: "360px", height: "180px" }}
+        sx={{
+          width: { xs: "100%", sm: "300px", md: "300px" },
+          height: "180px",
+        }}
       />
       <CardContent
         sx={{

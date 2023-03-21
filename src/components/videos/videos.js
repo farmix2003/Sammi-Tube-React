@@ -2,8 +2,12 @@ import { Box, Stack } from "@mui/material";
 import React from "react";
 import VideoCard from "../video-card/video-card";
 import ChannelCard from "../channel-card/channel-card";
+import Loader from "../loader/loader";
 
 const Videos = ({ videos }) => {
+  if (videos.length === 0) {
+    return <Loader />;
+  }
   return (
     <Stack
       width={"100%"}

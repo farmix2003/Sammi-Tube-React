@@ -3,6 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+a{
+text-decoration: none;
+color: #000;
+}
 .search-bar{
   border: none;
   outline: none;
@@ -42,8 +46,21 @@
 .category-btn:hover span{
   color: #ffffff !important;
 }
+.react-player{
+  height: 77vh !important;
+  width: 98% !important;
+  margin-left: 5px;
+}
 @media screen and (max-width: 600px) {
   .search-bar{
     width: 200px;
+  }
+  @media screen and (max-width: 400px) {
+    .search-bar{
+      width: 100px;
+    }
+  }
+  .react-player{
+    height: 45vh !important;
   }
 }

@@ -8,6 +8,7 @@ import {
   Typography,
 } from "@mui/material";
 import moment from "moment";
+import { Link } from "react-router-dom";
 import { color } from "../../constants/colors";
 
 const VideoCard = ({ videos }) => {
@@ -20,14 +21,16 @@ const VideoCard = ({ videos }) => {
         borderRadius: 0,
       }}
     >
-      <CardMedia
-        image={videos?.snippet?.thumbnails?.high?.url}
-        alt={videos?.snippet?.title}
-        sx={{
-          width: { xs: "100%", sm: "300px", md: "300px" },
-          height: "180px",
-        }}
-      />
+      <Link to={`/videos/${videos.id.videoId}`}>
+        <CardMedia
+          image={videos?.snippet?.thumbnails?.high?.url}
+          alt={videos?.snippet?.title}
+          sx={{
+            width: { xs: "100%", sm: "300px", md: "300px" },
+            height: "180px",
+          }}
+        />
+      </Link>
       <CardContent
         sx={{
           background: color.primary,
@@ -35,7 +38,7 @@ const VideoCard = ({ videos }) => {
           position: "relative",
         }}
       >
-        <>
+        <Link to={`/videos/${videos.id.videoId}`}>
           <Typography my={"5px"} sx={{ opacity: "0.4" }}>
             {moment(videos?.snippet?.publishedAt).fromNow()}
           </Typography>
@@ -52,7 +55,7 @@ const VideoCard = ({ videos }) => {
           >
             {videos?.snippet?.description.slice(0, 70)}
           </Typography>
-        </>
+        </Link>
         <>
           <Stack
             direction={"row"}

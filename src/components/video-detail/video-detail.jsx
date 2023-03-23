@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { ApiService } from "../../service/api-service";
 import { Avatar, Box, Chip, Stack, Typography } from "@mui/material";
@@ -108,24 +108,26 @@ const VideoDetail = () => {
               comments
             </Stack>
           </Stack>
-          <Stack
-            direction="row"
-            alignItems="center"
-            gap={"5px"}
-            marginTop={"5px"}
-          >
-            <Avatar
-              sx={{ marginLeft: "15px" }}
-              alt={videoDetail.snippet.channelTitle}
-              src={videoDetail.snippet.thumbnails.default.url}
-            />
-            <Typography variant="subtitle2" color={"grey"}>
-              {videoDetail.snippet.channelTitle}
-              <CheckCircle
-                sx={{ fontSize: "12px", color: "grey", ml: "5px" }}
+          <Link to={`/channel/${videoDetail?.snippet?.channelId}`}>
+            <Stack
+              direction="row"
+              alignItems="center"
+              gap={"5px"}
+              marginTop={"5px"}
+            >
+              <Avatar
+                sx={{ marginLeft: "15px" }}
+                alt={videoDetail.snippet.channelTitle}
+                src={videoDetail.snippet.thumbnails.default.url}
               />
-            </Typography>
-          </Stack>
+              <Typography variant="subtitle2" color={"grey"}>
+                {videoDetail.snippet.channelTitle}
+                <CheckCircle
+                  sx={{ fontSize: "12px", color: "grey", ml: "5px" }}
+                />
+              </Typography>
+            </Stack>
+          </Link>
         </Box>
         <Box
           width={{ xs: "100%", md: "25%" }}

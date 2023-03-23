@@ -24,8 +24,8 @@ const Search = () => {
     <Box p={2} sx={{ height: "90vh" }}>
       <Container sx={{ maxWidth: "90%" }}>
         <Typography variant="h4" fontWeight={"bold"} mb={2}>
-          Search reults for <span style={{ color: color.secondary }}>{id}</span>{" "}
-          videos
+          Search results for{" "}
+          <span style={{ color: color.secondary }}>{id}</span> videos
         </Typography>
       </Container>
       <Videos videos={videos} />

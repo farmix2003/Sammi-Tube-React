@@ -1,6 +1,6 @@
 import axios from "axios";
 const BASE_URL = "https://youtube-v31.p.rapidapi.com";
-const REACT_API_KEY = process.env.PUBLIC_URL;
+const REACT_API_KEY = process.env.REACT_APP_API_KEY;
 const options = {
   params: {
     maxResults: "50",

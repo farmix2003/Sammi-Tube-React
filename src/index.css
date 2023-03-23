@@ -55,6 +55,7 @@ color: #000;
   .search-bar{
     width: 200px;
   }
+}
   @media screen and (max-width: 400px) {
     .search-bar{
       width: 100px;
@@ -63,4 +64,3 @@ color: #000;
   .react-player{
     height: 45vh !important;
   }
-}

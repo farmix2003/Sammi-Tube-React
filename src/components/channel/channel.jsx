@@ -15,7 +15,6 @@ const Channel = () => {
         const dataChannelDetail = await ApiService.fetch(
           `channels?part=snippet&id=${id}`
         );
-        console.log(dataChannelDetail);
         setChannelDetails(dataChannelDetail.items[0]);
         const dataVideos = await ApiService.fetch(
           `search?channelId=${id}&part=snippet%2Cid&order=date`

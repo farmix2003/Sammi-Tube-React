@@ -8,6 +8,7 @@ const Videos = ({ videos }) => {
   if (videos.length === 0) {
     return <Loader />;
   }
+
   return (
     <Stack
       width={"100%"}
